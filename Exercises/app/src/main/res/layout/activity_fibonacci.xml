@@ -59,6 +59,7 @@
                 android:fontFamily="@font/poppins_regular"/>
         </LinearLayout>
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -72,32 +73,42 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center_horizontal">
-            <TextView
-                android:layout_width="wrap_content"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="No. 1"
-                android:textSize="20sp"
-                android:fontFamily="@font/poppins_medium" />
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="match_parent"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="No. 1 "
+                    android:textSize="20sp" />
 
-            <EditText
-                android:id="@+id/InsertNumber1"
-                android:inputType="number"
-                android:layout_width="50sp"
-                android:layout_height="40dp"
-                android:fontFamily="@font/poppins_regular"
-                android:layout_gravity="center_horizontal"
-                android:shadowColor="@color/purple"
-                android:textSize="15sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/InsertNumber1"
+                    android:inputType="number"
+                    android:layout_width="60sp"
+                    android:layout_height="45dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_gravity="left"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -113,31 +124,40 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center_horizontal">
-            <TextView
-                android:layout_width="wrap_content"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="No. 2"
-                android:textSize="20sp"
-                android:fontFamily="@font/poppins_medium" />
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="No. 2 "
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppins_medium" />
+            </LinearLayout>
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="match_parent"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/InsertNumber2"
+                    android:inputType="number"
+                    android:layout_width="60sp"
+                    android:layout_height="45dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_gravity="left"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
 
-            <EditText
-                android:id="@+id/InsertNumber2"
-                android:inputType="number"
-                android:layout_width="50sp"
-                android:layout_height="40dp"
-                android:fontFamily="@font/poppins_regular"
-                android:layout_gravity="center_horizontal"
-
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
         </LinearLayout>
 
         <LinearLayout
@@ -149,36 +169,47 @@
                 android:layout_height="30dp"/>
         </LinearLayout>
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center_horizontal">
-            <TextView
-                android:layout_width="wrap_content"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="Sequence Size"
-                android:textSize="20sp"
-                android:fontFamily="@font/poppins_medium" />
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="match_parent"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="Sequence Size "
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppins_medium" />
+            </LinearLayout>
 
-            <EditText
-                android:id="@+id/InsertSequence"
-                android:inputType="number"
-                android:layout_width="50sp"
-                android:layout_height="40dp"
-                android:fontFamily="@font/poppins_regular"
-                android:layout_gravity="center_horizontal"
-                android:shadowColor="@color/purple"
-                android:textSize="15sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/InsertSequence"
+                    android:layout_width="60sp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="number"
+                    android:shadowColor="@color/purple"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
@@ -197,17 +228,18 @@
             android:gravity="center_horizontal">
             <Button
                 android:id="@+id/Create"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
-                android:text="Create"
+                android:text="@string/create"
                 android:textSize="15sp"
                 android:backgroundTint="@color/purple"
                 android:fontFamily="@font/poppins_regular"/>
         </LinearLayout>
 
 
-
     </LinearLayout>
+
+
 
 </RelativeLayout>

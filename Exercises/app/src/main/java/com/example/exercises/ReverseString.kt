@@ -34,8 +34,22 @@ class ReverseString : AppCompatActivity() {
         buttonReverse.setOnClickListener {logicReverse() }
     }
 
-    //Reverse a string using kotlin and logic
+    //To ensure the data is temporarily saved
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
 
+        outState.putString("string", getText.text.toString())
+        outState.putString("result", showReverse.text.toString())
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+
+        getText.setText(savedInstanceState.getString("n1"))
+        showReverse.text = savedInstanceState.getString("result")
+    }
+
+    //Reverse a string using kotlin and logic
     private fun kotlinReverse() {
         val textString=getText.text.toString()
         showReverse.text=textString.reversed()

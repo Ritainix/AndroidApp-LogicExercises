@@ -2,6 +2,7 @@ package com.example.exercises
 
 import android.os.Bundle
 import android.os.Parcelable
+import android.text.Editable
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -36,6 +37,26 @@ class Fibonacci : AppCompatActivity() {
 
         ButtonCreate.setOnClickListener { fibonacci() }
     }
+
+    //To ensure the data is temporarily saved
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+
+        outState.putString("n1", TextN1.text.toString())
+        outState.putString("n2", TextN2.text.toString())
+        outState.putString("size", FSize.text.toString())
+        outState.putString("result", ShowNumbers.text.toString())
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+
+        TextN1.setText(savedInstanceState.getString("n1"))
+        TextN2.setText(savedInstanceState.getString("n2"))
+        FSize.setText(savedInstanceState.getString("size"))
+        ShowNumbers.text = savedInstanceState.getString("result")
+    }
+
 
     fun fibonacci(){
         val n1=TextN1.text.toString().toInt()

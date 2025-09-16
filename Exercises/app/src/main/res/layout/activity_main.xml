@@ -55,7 +55,7 @@
             android:gravity="center_horizontal">
             <Button
                 android:id="@+id/MM_reverseString"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="@string/reverse_string"
@@ -78,14 +78,15 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_horizontal">
+
             <Button
                 android:id="@+id/MM_fibonacci"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:backgroundTint="@color/purple"
                 android:text="Fibonacci"
-                android:textSize="15sp"
-                android:backgroundTint="@color/purple" />
+                android:textSize="15sp" />
 
         </LinearLayout>
 

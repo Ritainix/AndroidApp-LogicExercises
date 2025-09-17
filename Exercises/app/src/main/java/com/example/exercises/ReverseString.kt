@@ -13,17 +13,16 @@ class ReverseString : AppCompatActivity() {
 
     private lateinit var getText: EditText
     private lateinit var showReverse: TextView
-    private lateinit var buttonReverse: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_reverse_string)
 
-
         getText=findViewById<EditText>(R.id.InsertString)
         showReverse=findViewById<TextView>(R.id.TextReverse)
-        buttonReverse=findViewById<Button>(R.id.Reverse)
+
+        val buttonReverse: Button =findViewById<Button>(R.id.Reverse)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

@@ -20,8 +20,11 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        Toast.makeText(this,"OnStart", Toast.LENGTH_SHORT).show()
+
         val buttonRS: Button =findViewById<Button>(R.id.MM_reverseString)
         val buttonF: Button =findViewById<Button>(R.id.MM_fibonacci)
+        val buttonC: Button =findViewById<Button>(R.id.MM_coroutines)
 
         buttonRS.setOnClickListener {
             val intent = Intent(this, ReverseString::class.java)
@@ -32,6 +35,43 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Fibonacci::class.java)
             startActivity(intent)
         }
+
+        buttonC.setOnClickListener {
+            val intent = Intent(this, excCoroutines::class.java)
+            startActivity(intent)
+        }
+    }
+
+
+    //activity life cycle to understand to understand each one
+    override fun onStart(){
+        super.onStart()
+        Toast.makeText(this,"OnStart", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onPause(){
+        super.onPause()
+        Toast.makeText(this,"OnPause", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onResume(){
+        super.onResume()
+        Toast.makeText(this,"OnResume", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onStop(){
+        super.onStop()
+        Toast.makeText(this,"OnStop", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onRestart(){
+        super.onRestart()
+        Toast.makeText(this,"OnRestart", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onDestroy(){
+        super.onDestroy()
+        Toast.makeText(this,"OnDestroy", Toast.LENGTH_SHORT).show()
     }
 
 

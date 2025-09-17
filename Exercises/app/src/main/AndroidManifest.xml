@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Exercises">
         <activity
+            android:name=".excCoroutines"
+            android:exported="false" />
+        <activity
             android:name=".Fibonacci"
             android:exported="false" />
         <activity

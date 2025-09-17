@@ -18,7 +18,7 @@ class Fibonacci : AppCompatActivity() {
     private lateinit var TextN2: EditText
     private lateinit var FSize: EditText
     private lateinit var ShowNumbers: TextView
-    private lateinit var ButtonCreate: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -33,7 +33,8 @@ class Fibonacci : AppCompatActivity() {
         TextN2=findViewById<EditText>(R.id.InsertNumber2)
         FSize=findViewById<EditText>(R.id.InsertSequence)
         ShowNumbers=findViewById<TextView>(R.id.ShowNumbers)
-        ButtonCreate=findViewById<Button>(R.id.Create)
+
+        val ButtonCreate: Button =findViewById<Button>(R.id.Create)
 
         ButtonCreate.setOnClickListener { fibonacci() }
     }
